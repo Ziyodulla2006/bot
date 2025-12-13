@@ -162,7 +162,7 @@ bot.onText(/\/status/, (msg) => {
         `🤖 AI: ${status}\n` +
         `🔗 Server: Faol\n` +
         `🕐 Vaqt: ${new Date().toLocaleTimeString()}\n\n` +
-        `Bot @ziyodulla tomonidan yaratilgan`
+        `Bot @zyobe tomonidan yaratilgan`
     );
 });
 
