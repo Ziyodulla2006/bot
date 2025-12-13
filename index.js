@@ -10,9 +10,9 @@ app.get('/', (req, res) => {
     res.send('🤖 Telegram AI Bot ishlayapti!');
 });
 
-app.listen(PORT, () => {
-    console.log(`🌐 Web server ${PORT}-portda ishga tushdi`);
-});
+// app.listen(PORT, () => {
+//     console.log(`🌐 Web server ${PORT}-portda ishga tushdi`);
+// });
 
 // ==================== TELEGRAM BOT ====================
 const TelegramBot = require('node-telegram-bot-api');
@@ -184,10 +184,10 @@ bot.onText(/\/info/, (msg) => {
     const chatId = msg.chat.id;
     const message = `🤖 BOT HAQIDA\n\n` +
                    `Platforma: Google Gemini AI\n` +
-                   `Model: Gemini 1.5 Flash\n` +
+                //    `Model: Gemini 1.5 Flash\n` +
                    `Foydalanuvchilar: ${userSessions.size}\n` +
                    `Holat: Faol ✅\n\n` +
-                   `Bot @ziyodulla tomonidan yaratilgan`;
+                   `Bot @zyobe tomonidan yaratilgan`;
     
     bot.sendMessage(chatId, message);
 });
@@ -325,6 +325,6 @@ console.log('='.repeat(50));
 console.log(`📱 Bot foydalanuvchilari: ${userSessions.size}`);
 console.log(`🔑 Telegram Token: ${TELEGRAM_TOKEN ? '✅ MAVJUD' : '❌ YOQ'}`);
 console.log(`🤖 Google AI Key: ${GOOGLE_AI_KEY ? '✅ MAVJUD' : '❌ YOQ'}`);
-console.log(`🌐 Web Server: ${PORT}-portda`);
+// console.log(`🌐 Web Server: ${PORT}-portda`);
 console.log('='.repeat(50));
 console.log('✅ Bot faol. Xabarlarni kutmoqda...\n');
