@@ -185,7 +185,7 @@ bot.onText(/\/info/, (msg) => {
                    `Model: Gemini 1.5 Flash\n` +
                    `Foydalanuvchilar: ${userSessions.size}\n` +
                    `Holat: Faol ✅\n\n` +
-                   `Bot @ziyodulla tomonidan yaratilgan`;
+                   `Bot @zyobe tomonidan yaratilgan`;
     
     bot.sendMessage(chatId, message);
 });
