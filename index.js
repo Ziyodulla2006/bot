@@ -43,31 +43,16 @@ const bot = new TelegramBot(TELEGRAM_TOKEN, {
 });
 
 // Google AI ni sozlash
+// const genAI = new GoogleGenerativeAI(GOOGLE_AI_KEY);
+
+// // Modelni tanlash - eng ishonchli variantlar
+// let model;
 const genAI = new GoogleGenerativeAI(GOOGLE_AI_KEY);
 
-// Modelni tanlash - eng ishonchli variantlar
-let model;
-try {
-    model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
-    console.log('✅ Google AI modeli: gemini-1.5-flash-latest');
-} catch (error) {
-    try {
-        model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-        console.log('✅ Google AI modeli: gemini-1.5-flash');
-    } catch (error2) {
-        try {
-            model = genAI.getGenerativeModel({ model: "gemini-1.0-pro" });
-            console.log('✅ Google AI modeli: gemini-1.0-pro');
-        } catch (error3) {
-            console.error('❌ Google AI modeli topilmadi!');
-            console.error('Qoʻllab-quvvatlanadigan modellar:');
-            console.error('1. gemini-1.5-flash-latest');
-            console.error('2. gemini-1.5-flash');
-            console.error('3. gemini-1.0-pro');
-            process.exit(1);
-        }
-    }
-}
+// Modelni tanlash - faqat bitta ishonchli variant
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+console.log('✅ Google AI modeli: gemini-1.5-flash');
+
 
 // ==================== YORDAMCHI FUNKTSIYALAR ====================
 
