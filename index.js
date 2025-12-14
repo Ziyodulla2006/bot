@@ -19,9 +19,9 @@ require('dotenv').config();
 
 // Tokenlarni tekshirish
 const TELEGRAM_TOKEN = "7603962484:AAHvqlF8ktgilUKQD6t3wfRa_4Ikfo4PWuk";
-const GOOGLE_AI_KEY = "AIzaSyCPw3HdwBsmw6bKHuLrvja6KCbfaeGmEbE";
+const OPENAI_API_KEY = "AIzaSyCPw3HdwBsmw6bKHuLrvja6KCbfaeGmEbE";
 
-if (!TELEGRAM_TOKEN || !GOOGLE_AI_KEY) {
+if (!TELEGRAM_TOKEN || !OPENAI_API_KEY) {
     console.error('❌ XATO: .env faylda TELEGRAM_BOT_TOKEN yoki GOOGLE_AI_KEY yoʻq!');
     console.error('Iltimos, .env faylini yarating va tokenlarni kiriting:');
     console.error('TELEGRAM_BOT_TOKEN=7663962484:AAHvq1F8ktg11UKQb6t3wfRa_41kfo4Pkuk');
@@ -41,7 +41,7 @@ const bot = new TelegramBot(TELEGRAM_TOKEN, {
 });
 
 // Google AI ni sozlash
-const genAI = new GoogleGenerativeAI(GOOGLE_AI_KEY);
+const genAI = new GoogleGenerativeAI(OPENAI_API_KEY);
 
 // Modelni tanlash - eng ishonchli variantlar
 let model;
@@ -322,7 +322,7 @@ console.log('🤖 TELEGRAM AI BOT ISHGA TUSHMOQDA...');
 console.log('='.repeat(50));
 console.log(`📱 Bot foydalanuvchilari: ${userSessions.size}`);
 console.log(`🔑 Telegram Token: ${TELEGRAM_TOKEN ? '✅ MAVJUD' : '❌ YOQ'}`);
-console.log(`🤖 Google AI Key: ${GOOGLE_AI_KEY ? '✅ MAVJUD' : '❌ YOQ'}`);
+console.log(`🤖 Google AI Key: ${OPENAI_API_KEY ? '✅ MAVJUD' : '❌ YOQ'}`);
 console.log(`🌐 Web Server: ${PORT}-portda`);
 console.log('='.repeat(50));
 console.log('✅ Bot faol. Xabarlarni kutmoqda...\n');
