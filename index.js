@@ -18,8 +18,8 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 require('dotenv').config();
 
 // Tokenlarni tekshirish
-const TELEGRAM_TOKEN = "7603962484:AAHvqlF8ktgilUKQD6t3wfRa_4Ikfo4PWuk";
-const OPENAI_API_KEY = "AIzaSyCPw3HdwBsmw6bKHuLrvja6KCbfaeGmEbE";
+const TELEGRAM_TOKEN = process.env.TELEGRAM_TOKEN;
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 if (!TELEGRAM_TOKEN || !OPENAI_API_KEY) {
     console.error('❌ XATO: .env faylda TELEGRAM_BOT_TOKEN yoki GOOGLE_AI_KEY yoʻq!');
