@@ -46,7 +46,7 @@ const genAI = new GoogleGenerativeAI(OPENAI_API_KEY);
 // Modelni tanlash - eng ishonchli variantlar
 // let model;
 // Eng ishonchli variant
-const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
 console.log('✅ Google AI modeli: gemini-1.0-pro');
 // try {
 //     model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
